@@ -56,6 +56,8 @@ namespace HttpClientWithProxyTest
 			// This fails. The uri passed to the ICredentials.GetCredentials is the original request uri
 			// not the proxy uri.
 			await RunTest("http://go.microsoft.com/fwlink/?LinkID=288859");
+
+			await RunTest ("http://neverssl.com/");
 		}
 
 		static async Task RunTest (string url)
